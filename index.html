@@ -4,119 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Bootstrap 4.6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Dev<span>Portfolio</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#qualification">Qualifications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dev<span class="text-primary">Portfolio</span></a>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I am <span>Christopher Steudel</span></h1>
-            <a href="#projects" class="btn">View My Work</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#qualification">Qualifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero d-flex align-items-center text-center" style="height:100vh">
+        <div class="container">
+            <h1 class="text-white">
+                Hello, I am <span class="text-primary">Christopher Steudel</span>
+            </h1>
+
+            <a href="#projects" class="btn btn-primary mt-3">
+                View My Work
+            </a>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-            <div class="about-img">
-                <img src="assets/img/avatar.jpeg" alt="Developer Photo">
-            </div>
-            <div class="about-text">
-                <p>Hello! My name is Christopher. I am a student of Systems Analysis and Development and I am beginning my journey in programming. I have been learning and practicing both front-end and back-end development, creating simple projects to grow as a full-stack developer.</p>
-                
-                <div class="skills">
-                    <span>JavaScript</span>
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                About Me
+            </h2>
+
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="assets/img/avatar.jpeg" class="img-fluid rounded-circle" alt="Developer Photo">
+                </div>
+
+                <div class="col-md-8">
+                    <p>
+                        Hello! My name is Christopher. I am a student of Systems Analysis and Development and I am beginning
+                        my journey in programming. I have been learning and practicing both front-end and back-end
+                        development, creating simple projects to grow as a full-stack developer.
+                    </p>
+
+                    <h5>Skills</h5>
+                    <span class="badge badge-primary p-2">JavaScript</span>
+                    <span class="badge badge-primary p-2">PHP</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="qualification" class="qualification">
-        <h2 class="section-title">Qualifications</h2>
-        <div class="qualification-container">
-            <div class="education">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>SENAI</h4>
-                        <p>Associate Degree in Systems Analysis and Development (2025–Present)</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>SENAI</h4>
-                        <p>Basic Excel Course (2022)</p>
-                    </div>
+    <!-- QUALIFICATIONS -->
+    <section id="qualification" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                Qualifications
+            </h2>
+
+            <div class="row">
+
+                <!-- EDUCATION -->
+                <div class="col-md-6">
+                    <h4>
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </h4>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong>SENAI</strong><br>
+                            Technical Degree in Systems Analysis and Development<br>
+                            <small>2025 – Present</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>SENAI</strong><br>
+                            Basic Excel Course<br>
+                            <small>2022</small>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="experience">
-                <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Companhia Fabril Lepper</h4>
-                        <p>Apprentice (2022–2023)</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Agroshop Paraíso</h4>
-                        <p>Stock Clerk (2023–2024)</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Globo Renault</h4>
-                        <p>Workshop Counter Clerk (2024–Present)</p>
-                    </div>
+
+                <!-- EXPERIENCE -->
+                <div class="col-md-6">
+                    <h4>
+                        <i class="fas fa-briefcase"></i> Experience
+                    </h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong>Companhia Fabril Lepper</strong><br>
+                            Apprentice<br>
+                            <small>2022 – 2023</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Agroshop Paraíso</strong><br>
+                            Stock Clerk<br>
+                            <small>2023 – 2024</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Globo Renault</strong><br>
+                            Workshop Counter Clerk<br>
+                            <small>2024 – Present</small>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-container">
-            <h2>Under Development...</h2>
-        </div>
-    </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="py-5">
+        <div class="container text-center">
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> christopher_steudel@estudante.sesisenai.org.br</p>
-                <div class="social-links">
-                    <a href="https://github.com/christopherssenai"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/christopher-steudel-7948b2215/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="#"><i class="fas fa-file-pdf"></i> Resume</a>
+            <h2 class="mb-5">
+                My Projects
+            </h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <p>
+                         Under Development...
+                    </p>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Dev Portfolio. All rights reserved.</p>
+    <!-- CONTACT -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                Get In Touch
+            </h2>
+            <div class="row">
+
+                <!-- CONTACT INFO -->
+                <div class="col-md-6">
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        christopher_steudel@estudante.sesisenai.org.br
+                    </p>
+
+                    <p>
+                        <a href="https://github.com/christopherssenai">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="https://www.linkedin.com/in/christopher-steudel-7948b2215/">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </p>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+
+                        <button class="btn btn-primary">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p class="mb-0">
+            © 2025 Dev Portfolio. All rights reserved.
+        </p>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
